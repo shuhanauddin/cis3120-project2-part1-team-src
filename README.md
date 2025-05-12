@@ -1,2 +1,10 @@
 # cis3120-project2-team-src
-Web scraping and Dog API data project for CIS 3120 Project 2
+For our CIS 3120 Project 2, our group created a collaborative data project that combines web scraping and API usage to build a comprehensive dataset of dog breeds. We began by scraping data from an open-source Coda.io document titled “Dog Breeds” (https://coda.io/@angad/dogbreeds), which provided information on various dog breeds including name, size, temperament, shedding level, and other breed-specific traits. This formed our base dataset (df1), containing structured information about over 100 breeds.
+
+Next, we enhanced this dataset using the Dog CEO API (https://dog.ceo/dog-api/), an open-source API that provides images for various dog breeds. Using Python and the requests library, we created a function to call the API for each breed name and fetch a random image URL. We stored this information in a second dataframe (df2), which contained the breed name and the corresponding image link from the API.
+
+We then merged df1 and df2 into a final combined dataframe (df3), ensuring each breed’s detailed attributes were matched with its representative image. After verifying the structure and completeness of the dataset, we printed out descriptive statistics and saved the final result as a CSV file. We also created a SQLite database and stored the merged dataset as a table called dog_breeds, which can be used for querying or integration with future applications.
+
+To collaborate effectively, our team used GitHub with SSH key authentication. Each team member worked on a separate branch: Ramsil handled the initial web scraping from Coda.io, Crisleidy handled API calls to fetch image data, and Shuhana handled the merging process, CSV export, data description, and database creation. We ensured to commit changes frequently with clear messages, pushing to separate branches, and submitting pull requests for review before merging into the main branch.
+
+ Our final product is a clean, useful dataset that can be used in pet adoption platforms, breed recommendation tools, or educational resources about dogs.
